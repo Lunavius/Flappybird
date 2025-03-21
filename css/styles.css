@@ -1,0 +1,183 @@
+html, body {
+    touch-action: pan-x pan-y;
+    user-scalable: no;
+    overscroll-behavior: contain;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 90vh;
+    margin: 0;
+    background-image: url('https://unveroleone.github.io/flappybird/media/background_and_road.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+header{
+    text-align: end;
+    margin-right: 40px;
+    color: white;
+    font-size: 300;
+}
+
+#player {
+    position: absolute;
+    top: 400px;
+    left: 50px;
+    width: 50px;
+    height: 35px;
+    background-image: url("https://unveroleone.github.io/flappybird/media/flappy.png");
+    background-size: cover;
+}
+
+#fps-counter{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#gameover {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    background-color: beige;
+    width: 250px;
+    height: 140px;
+    border-radius: 20px;
+    color: black;
+    padding: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#gameover button {
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+    transition: all ease 0.3s;
+    margin-bottom: 10px;
+}
+
+#gameover button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: black;
+    color: white;
+}
+
+#ground-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-image: url("https://unveroleone.github.io/flappybird/media/floor-sprite.png");
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+#ground1 {
+    left: 0;
+}
+
+#ground2 {
+    left: 100%; 
+}
+#ground2 {
+    left: 200%;
+}
+
+.pipe-container {
+    position: absolute;
+    width: 100px;
+}
+  
+.pipe {
+    width: 100px;
+    height: 400px;
+    background-size: cover;
+    position: absolute;
+    z-index: -2;
+}
+
+
+.pipe-up {
+    top: 0;
+    transform: rotate(180deg); 
+    background-image: url("https://unveroleone.github.io/flappybird/media/pipe_bottom.png");
+}
+
+.pipe-down {
+    top: 600px;
+    background-image: url("https://unveroleone.github.io/flappybird/media/pipe_bottom.png");
+}
+
+#MainMenu {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #f5f5dc;
+    width: 250px;
+    height: 140px;
+    border-radius: 20px;
+    color: black;
+    padding: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#MainMenu button {
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+    transition: all ease 0.3s;
+    margin-bottom: 10px;
+}
+
+#MainMenu button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: black;
+    color: white;
+}
+
+#background{
+    position: absolute;
+    top: -100vw;
+    left: -100vw;
+    width: 200vw;
+    height: 300vw;
+    background-color: #efefde;
+
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}

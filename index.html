@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<header>
+    <h2 id="score">Score: unlimited</h2>
+    <div id="fps-counter">FPS: 0</div>
+</header>
+<body>
+    <div id="player"></div>
+    <div id="gameover">
+        <h2>Game Over!</h2>
+        <p id="gameOverScore">Your Score is: </p>
+        <button id="restart" onclick="restartGame()">Restart</button>
+        <button id="menu" onclick="MainMenu()">Menu</button>
+    </div>
+    <div id="MainMenu">
+        <h2>Flappy Bird</h2>
+        <button id="start" onclick="restartGame()">Start</button>
+    </div>
+    <div id="background"></div>
+    <div id="ground-container">
+        <div class="ground" id="ground1"></div>
+        <div class="ground" id="ground2"></div>
+        <div class="ground" id="ground3"></div>
+    </div>        
+    <script src="script/index.js"></script>
+</body>
+</html>
